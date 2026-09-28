@@ -1,0 +1,29 @@
+{
+  "version": "2026.09.0",
+  "rules": [
+    {
+      "id": "FMT-ELF",
+      "description": "Sample is an ELF executable",
+      "scope": "format",
+      "match": "exact",
+      "pattern": "elf",
+      "severity": "info"
+    },
+    {
+      "id": "SEC-UPX",
+      "description": "UPX packer section name present",
+      "scope": "section_name",
+      "match": "contains",
+      "pattern": "upx",
+      "severity": "medium"
+    },
+    {
+      "id": "BYTES-SHELLCODE",
+      "description": "Common marker bytes in section data",
+      "scope": "section_bytes",
+      "match": "hex",
+      "pattern": "90 90 90 90",
+      "severity": "low"
+    }
+  ]
+}
